@@ -1,0 +1,16 @@
+# Cline Rules — lastmilelogistics
+
+## Технологии
+- Python 3.14
+- FastAPI
+- Poetry
+- PostgreSQL
+- Clean Architecture (слои: entites → scenarios → using)
+
+## Правила разработки
+- Использовать абсолютные импорты.
+- Соблюдать конфигурацию Ruff из pyproject.toml.
+- Не использовать print().
+- Стараться разрабатывать по SOLID.
+- Все зависимости внедрять через DI.
+- Бизнес-логика не должна зависеть от FastAPI.
