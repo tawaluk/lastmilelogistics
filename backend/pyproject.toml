@@ -1,0 +1,88 @@
+[project]
+name = "lastmilelogistics"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "tawaluk", email = "tawaluk@yandex.ru" }
+]
+readme = "README.md"
+requires-python = ">=3.14"
+
+
+dependencies = [
+    "fastapi>=0.136.3,<0.137.0",
+    "gunicorn (>=26.0.0,<27.0.0)",
+]
+
+
+[tool.poetry]
+packages = [{ include = "lastmilelogistics", from = "src" }]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+
+
+[tool.ruff.format]
+preview = true
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+
+[tool.ruff.lint]
+select = [
+    "E", "W", "F",
+    "UP",
+    "N",
+    "C4",
+    "BLE",
+    "B",
+    "A",
+    "C90",
+    "DTZ",
+    "T10",
+    "ISC",
+    "ICN",
+    "G",
+    "PGH",
+    "PIE",
+    "PT",
+    "PYI",
+    "RUF",
+    "SIM",
+    "T20",
+    "YTT",
+    "EXE",
+    "NPY",
+    "PD",
+    "TRY",
+    "FLY",
+]
+
+ignore = [
+    "E501",
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    "TRY003",
+    "TRY300",
+    "DTZ006",
+    "N818",
+]
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.pylint]
+max-args = 4
+max-returns = 3
